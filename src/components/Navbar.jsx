@@ -1,33 +1,47 @@
-import React, { useRef,useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {useState} from "react"
-import {useNavigate} from 'react-router-dom'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const logout = () => {
-        navigate('/')
-    }
+  const logout = () => {
+    navigate("/");
+  };
   return (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#" onClick={logout}>Logout</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" onClick={logout}>Logout</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" onClick={logout}>
+          Logout
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                Home <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onClick={logout}>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;
